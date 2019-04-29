@@ -1,3 +1,14 @@
 .Pokecard {
-  border: 2px solid mediumaquamarine;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
+  height: 250px;
+  margin: 1rem;
+  padding: 8px;
+  text-align: center;
+  width: 250px;
+}
+
+.Pokecard-data {
+  font-size: 80%;
 }
