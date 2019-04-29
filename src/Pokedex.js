@@ -17,12 +17,16 @@ class Pokedex extends Component {
   }
 
   render() {
+    let handResult = this.props.isWinner ? 'WINNER!' : 'LOSER!'
+    if (this.props.isTie) handResult = "IT'S A TIE!"
     return (
       <div className="Pokedex">
         <h1>Pokedex!</h1>
+        <p>Total Experience: {this.props.exp}</p>
+        <p>{handResult}</p>
         <div className="Pokedex-cards">
           {this.props.pokemon.map(p => (
-            <Pokecard id={p.id} name={p.name} type={p.type} exp={p.base_experience} />
+            <Pokecard id={p.id} name={p.name} type={p.type} exp={p.base_experience} key={p.id} />
           ))}
         </div>
       </div>
